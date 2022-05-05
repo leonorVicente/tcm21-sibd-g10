@@ -2,7 +2,16 @@
 
 
 ## Descrição do trabalho
-O trabalho consiste na especificação e desenvolvimento de um sistema que permita informatizar as vendas de uma loja de vestuário. Este sistema é extremamente necessário para esta loja, dado o crescimento exponencial das suas vendas - que cada vez têm sido mais difíceis de registar. Assim, pretende-se que o sistema desenvolvido permita registar as vendas, nomeadamente: o código da venda, o funcionário responsável, o nome do cliente, o número de cliente (caso possua uma ficha de cliente) e o valor. Desta forma, também é necessário um sistema que contenha as fichas dos clientes, ou seja: o número de cliente, o nome, o número do Bilhete de Identidade/Cartão de Cidadão, o telemóvel e o código-postal. Ora, é importante referir que a sistematização dos códigos postais dos clientes é algo bastante importante para os donos da lojas, pois, num futuro próximo, tencionam abrir outra loja e, com estes dados, saberão qual será a melhor localização para esta. 
+O trabalho consiste na especificação e desenvolvimento de um sistema que permita informatizar as vendas de uma loja de vestuário. Este sistema é extremamente necessário para esta loja, dado o crescimento exponencial das suas vendas - que cada vez têm sido mais difíceis de registar. 
+
+Assim, pretende-se que o sistema desenvolvido permita registar as vendas, nomeadamente: o código da venda, o funcionário responsável, o nome do cliente, o número de cliente (caso possua uma ficha de cliente) e o valor. Desta forma, também é necessário que o sistema contenha as fichas dos clientes, ou seja: o número de cliente, o nome, o telemóvel e o código-postal. Ora, é importante referir que a sistematização dos códigos postais dos clientes é algo bastante importante para os donos da loja, pois, num futuro próximo, tencionam abrir outra loja e, com estes dados, saberão qual será a melhor localização para a mesma. 
+
+Para além disso, a loja também necessita de ter informatizado o stock de produtos no armazém, para saber quando é necessário fazer encomendas ao fornecedor. Assim, é necessário ter acesso ao: número de peças do item 1, número de peças do item 2, número de peças do item 
+
+
+Tal, implica a informatização das reservas feitas por clientes e dos pedidos a fornecedores.
+
+
 _(Descrever o trabalho numa linguagem natural. Descrição entre 500 a 1000 palavras.)_
 
 ## Modelação do problema
