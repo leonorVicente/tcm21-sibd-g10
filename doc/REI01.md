@@ -2,7 +2,7 @@
 
 
 ## Descrição do trabalho
-O trabalho consiste na especificação e desenvolvimento de um sistema …
+O trabalho consiste na especificação e desenvolvimento de um sistema que permita informatizar as vendas de uma loja de vestuário. Este sistema é extremamente necessário para esta loja, dado o crescimento exponencial das suas vendas - que cada vez têm sido mais difíceis de registar. 
 _(Descrever o trabalho numa linguagem natural. Descrição entre 500 a 1000 palavras.)_
 
 ## Modelação do problema
