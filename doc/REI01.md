@@ -8,14 +8,7 @@ Assim, pretende-se que o sistema desenvolvido permita registar as vendas, nomead
 
 Consequentemente, será necessário informatizar cada produto, isto é: código, stock em loja, stock em armazém. Deste modo, para distinguirmos os diferentes tamanhos de cada produto, será colocado a seguir ao seu código a letra do tamanho a que corresponde (S/M/L). Tal, implica que o stock do armazém (quantidade do produto 1S, quantidade do produto 1M, quantidade do produto 1L, quantidade do produto 2S, quantidade do produto 2M, quantidade do produto 2L...) e o stock em loja (quantidade do produto 1S, quantidade do produto 1M, quantidade do produto 1L, quantidade do produto 2S, quantidade do produto 2M, quantidade do produto 2L...) sejam informatizados.
 
-Para além disso, a loja também necessita de ter informatizado o stock de produtos em loja, , número de peças do item 
-
-
-, para saber quando é necessário fazer encomendas ao fornecedor. Assim, é necessário ter acesso ao
-Tal, implica a informatização das reservas feitas por clientes e dos pedidos a fornecedores.
-
-
-_(Descrever o trabalho numa linguagem natural. Descrição entre 500 a 1000 palavras.)_
+Por último, será necessário informatizar as reservas feitas por clientes: número da reserva, número de cliente, funcionário responsável, valor e estado do pagamento; assim como, os pedidos a forncedores: número do pedido, código do produto, quantidade do produto e o valor. 
 
 ## Modelação do problema
 
