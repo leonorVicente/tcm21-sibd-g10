@@ -13,5 +13,5 @@
 
 ---
 
-< Previous | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rei01.md)
+< Previous | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](REI01.md)
 :--- | :---: | ---: 
