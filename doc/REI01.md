@@ -6,9 +6,12 @@ O trabalho consiste na especificação e desenvolvimento de um sistema que permi
 
 Assim, pretende-se que o sistema desenvolvido permita registar as vendas, nomeadamente: o código da venda, o funcionário responsável, o nome do cliente, o número de cliente (caso possua uma ficha de cliente) e o valor. Desta forma, também é necessário que o sistema contenha as fichas dos clientes, ou seja: o número de cliente, o nome, o telemóvel e o código-postal. Ora, é importante referir que a sistematização dos códigos postais dos clientes é algo bastante importante para os donos da loja, pois, num futuro próximo, tencionam abrir outra loja e, com estes dados, saberão qual será a melhor localização para a mesma. 
 
-Para além disso, a loja também necessita de ter informatizado o stock de produtos no armazém, para saber quando é necessário fazer encomendas ao fornecedor. Assim, é necessário ter acesso ao: número de peças do item 1, número de peças do item 2, número de peças do item 
+Consequentemente, será necessário informatizar cada produto, isto é: código, stock em loja, stock em armazém. Deste modo, para distinguirmos os diferentes tamanhos de cada produto, será colocado a seguir ao seu código a letra do tamanho a que corresponde (S/M/L).
+
+Para além disso, a loja também necessita de ter informatizado o stock de produtos em loja, , número de peças do item 
 
 
+, para saber quando é necessário fazer encomendas ao fornecedor. Assim, é necessário ter acesso ao
 Tal, implica a informatização das reservas feitas por clientes e dos pedidos a fornecedores.
 
 
