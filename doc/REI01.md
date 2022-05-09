@@ -11,9 +11,9 @@ Pretende-se que o sistema desenvolvido permita registar as vendas. Assim sendo, 
 
 Relativamente aos funcionários, estes são identificados pelo(/a): código de funcionário, tipo de funcionário (ou seja, se é um gerente ou um lojista), nome, morada, número de identificação fiscal, número de telemóvel e e-mail. Note-se que, saber qual é o "tipo" do funcionário é fundamental para o funcionamento do sistema, pois apenas os funcionários que são gerentes é que conseguem fazer pedidos a fornecedores.
 
-A loja tem vários fornecedores que garantem o fornecimento dos produtos que esta vende. Cada um destes tem: um código, um nome, uma morada, um código postal e um telefone. 
+A loja tem vários fornecedores que garantem o fornecimento dos produtos que esta vende. Cada um destes tem: um código, um nome, uma morada, um código postal e um telefone. Os produtos fornecidos são todos made in Portugal, de forma a apoiar o comércio nacional, e adequam-se a todos os gostos e tamanhos. Assim, podemos encontrar camisolas, camisas, calças, saias, vestidos, entre muitos outros produtos - cuja distinção é feita através de um código. Para além disso, cada produto também possui um stock em loja, um stock em armazém, um preço e diferentes tamanhos. 
 
-Consequentemente, será necessário informatizar cada produto, isto é: código, stock em loja, stock em armazém e o tamanho. 
+
 
 Por último, será necessário informatizar as reservas feitas por clientes: número da reserva, número de cliente, funcionário responsável, valor e estado do pagamento; assim como, os pedidos a forncedores: número do pedido, código do produto, quantidade do produto e o valor. 
 
