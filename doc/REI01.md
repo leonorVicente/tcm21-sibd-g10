@@ -13,9 +13,9 @@ Relativamente aos funcionários, estes são identificados pelo(/a): código de f
 
 A loja tem vários fornecedores que garantem o fornecimento dos produtos que esta vende. Cada um destes tem: um código, um nome, uma morada, um código postal e um telefone. Os produtos fornecidos são todos made in Portugal, de forma a apoiar o comércio nacional, e adequam-se a todos os gostos e tamanhos. Assim, podemos encontrar camisolas, camisas, calças, saias, vestidos, entre muitos outros produtos - cuja distinção é feita através de um código. Para além disso, cada produto também possui um stock em loja, um stock em armazém, um preço e diferentes tamanhos. 
 
+Caso o cliente pretenda um produto que não tenha stock em loja, o funcionário verificará que o mesmo tem stock em armazém. Caso esteja indisponível no armazém, o cliente poderá fazer uma reserva, da qual irá constar, um número de reserva, o número do cliente que a efetuou (pois para efetuar uma reserva, o cliente necessita de possuir uma ficha de cliente), o nome do funcionário responsável, o valor e o estado de pagamento (ou seja, se o cliente já efetuou o pagamento da reserva ou não).
 
-
-Por último, será necessário informatizar as reservas feitas por clientes: número da reserva, número de cliente, funcionário responsável, valor e estado do pagamento; assim como, os pedidos a forncedores: número do pedido, código do produto, quantidade do produto e o valor. 
+Tanto para as reservas de clientes, como para o abastecimento da loja, o gerente faz pedidos aos fornecedores, que são constituídos por um número de pedido, código do produto, quantidade e valor. 
 
 ## Modelação do problema
 
