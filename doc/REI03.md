@@ -1,6 +1,16 @@
 # C3 : Esquema conceptual
 
 ## Modelo E/A
+
+As entidades tipo definidas são:
+
+VENDAS ( _ codigo _ , funcionario , valor )
+CLIENTES ( _ numeroCliente _ , nomeFuncionario , telemovel , codigoPostal )
+PRODUTO ( _ codigoProduto _ , stockLoja , stockArmazem , tamanho )
+RESERVAS ( _ numeroReserva _ , numeroCliente , nomeFuncionario , valor , estadoPagamento )
+PEDIDOS ( _ numeroPedido _ , codigoProduto , quantidade , valor )
+FORNECEDORES ( _ codigoFornecedores _ , nome, morada , codigoPostal )
+FUNCIONARIOS (
 _(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
 
 Exemplo de inserção de uma imagem:   
