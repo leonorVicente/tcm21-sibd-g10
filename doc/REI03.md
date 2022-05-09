@@ -20,6 +20,7 @@ FORNECEDORES ( _ codigoFornecedores _ , nome, morada , codigoPostal )
 
 FUNCIONARIOS ( _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
 
+
 #### As associações definidas são:
 
 saoEfetuadas ( LOJA , VENDAS )
