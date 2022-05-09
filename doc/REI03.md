@@ -16,7 +16,11 @@ PEDIDOS ( _ numeroPedido _ , codigoProduto , quantidade , valor )
 
 FORNECEDORES ( _ codigoFornecedores _ , nome, morada , codigoPostal )
 
-FUNCIONARIOS (
+FUNCIONARIOS ( _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
+
+As associações definidas são:
+
+
 
 _(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
 
