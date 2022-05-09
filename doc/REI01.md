@@ -2,6 +2,9 @@
 
 
 ## Descrição do trabalho
+
+Com este relatório o grupo visa aqui apresentar toda a informação relativamente ao sistema a desenvolver, bem como todas as especificações por este requeridas, num formato concreto e por extenso, de forma a verificar que todos os elementos aqui presentes estão completos e em conformidade com o pedido pelo docente da disciplina no enunciado do trabalho.
+
 O trabalho consiste na especificação e desenvolvimento de um sistema que permita informatizar as vendas de uma loja de vestuário. Este sistema é extremamente necessário para esta loja, dado o crescimento exponencial das suas vendas - que cada vez têm sido mais difíceis de registar. 
 
 Assim, pretende-se que o sistema desenvolvido permita registar as vendas, nomeadamente: o código da venda, o nome do funcionário responsável, o nome do cliente, o número de cliente (caso possua uma ficha de cliente) e o valor. Desta forma, também é necessário que o sistema contenha as fichas dos clientes, ou seja: o número de cliente, o nome, o telemóvel e o código-postal. Ora, é importante referir que a sistematização dos códigos postais dos clientes é algo bastante importante para os donos da loja, pois, num futuro próximo, tencionam abrir outra loja e, com estes dados, saberão qual será a melhor localização para a mesma. 
