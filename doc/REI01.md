@@ -8,7 +8,9 @@ Assim, pretende-se que o sistema desenvolvido permita registar as vendas, nomead
 
 Relativamente aos funcionários, será necessário que o sistema informático contenha: o código de funcionário, o tipo de funcionário (ou seja, se é um gerente ou um lojista), o nome, a morada, o número de identificação fiscal, o número de telemóvel e o e-mail. Note-se que, saber qual é o "tipo" do funcionário é algo importante, pois apenas os que são gerentes conseguem fazer pedidos a fornecedores.
 
-Consequentemente, será necessário informatizar cada produto, isto é: código, stock em loja, stock em armazém. Deste modo, para distinguirmos os diferentes tamanhos de cada produto, será colocado a seguir ao seu código a letra do tamanho a que corresponde (S/M/L). Tal, implica que o stock do armazém (quantidade do produto 1S, quantidade do produto 1M, quantidade do produto 1L, quantidade do produto 2S, quantidade do produto 2M, quantidade do produto 2L...) e o stock em loja (quantidade do produto 1S, quantidade do produto 1M, quantidade do produto 1L, quantidade do produto 2S, quantidade do produto 2M, quantidade do produto 2L...) sejam informatizados.
+Quanto aos fornecedores, o sistema irá informatizar o seu código, nome, morada, código postal e telefone.
+
+Consequentemente, será necessário informatizar cada produto, isto é: código, stock em loja, stock em armazém e o tamanho. 
 
 Por último, será necessário informatizar as reservas feitas por clientes: número da reserva, número de cliente, funcionário responsável, valor e estado do pagamento; assim como, os pedidos a forncedores: número do pedido, código do produto, quantidade do produto e o valor. 
 
