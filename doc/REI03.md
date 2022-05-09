@@ -4,6 +4,8 @@
 
 As entidades tipo definidas são:
 
+LOJA ( _ numeroContribuinte _ , nome , morada , codigoPostal , telefone )
+
 VENDAS ( _ codigo _ , funcionario , valor )
 
 CLIENTES ( _ numeroCliente _ , nomeFuncionario , telemovel , codigoPostal )
@@ -20,7 +22,19 @@ FUNCIONARIOS ( _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , 
 
 As associações definidas são:
 
+saoEfetuadas ( LOJA , VENDAS )
 
+tem ( LOJA , FORNECEDORES )
+
+efetuaRegistos ( LOJA , CLIENTES )
+
+possui ( LOJA , PRODUTO )
+
+sãoEfetivadas ( CLIENTES , RESERVAS )
+
+sãoFeitos ( FUNCIONARIOS , PEDIDOS )
+
+trabalhaEm ( LOJA , FUNCIONARIOS )
 
 _(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
 
