@@ -20,6 +20,14 @@ O sistema deverá ser simples e fácil de usar.
 
 O sistema deverá estar preparado para acompanhar o crescimento das vendas, assim como, no futuro, o possível surgimento de outra loja. 
 
+#### Segurança:
+
+O sistema deverá proteger a informação de acessos não autorizados.
+
+#### Disponibilidade:
+
+O sistema deverá estar disponível a qualquer altura, em qualquer lugar.
+
 
 
 ---
