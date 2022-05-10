@@ -18,6 +18,8 @@ O sistema deverá ser simples e fácil de usar.
 
 #### Escabilidade:
 
+O sistema deverá estar preparado para acompanhar o crescimento das vendas, assim como, no futuro, o possível surgimento de outra loja. 
+
 
 
 ---
