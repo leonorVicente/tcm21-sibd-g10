@@ -47,7 +47,8 @@ Always add a description to help the user understand the figure
 NOTA: Cada entidade-tipo e cada associação devem ter um pequeno texto – um ou dois parágrafos – para descrever esse elemento do modelo e os seus atributos)
 
 ## Regras de negócio adicionais (Restrições)
-_(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo E/A, que visam a manutenção da consistência e integridade da modelação do problema)_
+
+A única regra de negócio adicional, tal como referido anteriormente, é que apenas o gerente consegue fazer pedidos a fornecedores.
 
 ---
 [< Previous](REI02.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >]
