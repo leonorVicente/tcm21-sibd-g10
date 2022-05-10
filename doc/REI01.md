@@ -21,6 +21,10 @@ Tanto para as reservas de clientes, como para o abastecimento da loja, o gerente
 
 O primeiro pressuposto utilizado na modelação deste problema é que todas as entidades chaves (o código de funcionário, o código da reserva, etc.) possuem um valor único que não se pode repetir: por exemplo, não podemos ter duas reservas com o mesmo código. 
 
+Outro pressuposto utilizado na modelação deste problema é que a loja precisa sempre de empregados para funcionar.
+
+Também, foi considerado que, tal como explicado anteriormente, apenas o gerente pode efetuar pedidos a fornecedores. 
+
 
 ---
 [< Previous](REI00.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](REI02.md)
