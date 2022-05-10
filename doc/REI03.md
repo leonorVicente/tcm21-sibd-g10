@@ -12,7 +12,7 @@ CLIENTES ( _ numeroCliente _ , nome , telemovel , codigoPostal )
 
 PRODUTO ( _ codigoProduto _ , stockLoja , stockArmazem , tamanho )
 
-RESERVAS ( _ numeroReserva _ , numeroCliente , nomeFuncionario , valor , estadoPagamento )
+RESERVAS ( _ numeroReserva _ , apelido , valor , estadoPagamento )
 
 PEDIDOS ( _ numeroPedido _ , codigoProduto , quantidade , valor )
 
