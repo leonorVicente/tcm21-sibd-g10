@@ -37,14 +37,9 @@ sãoFeitos ( FUNCIONARIOS , PEDIDOS ) , 1:N , P/T
 
 trabalhaEm ( LOJA , FUNCIONARIOS ) , 1:N , T/T
 
-_(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
+  
+(Diagrama1.jpeg)   
 
-Exemplo de inserção de uma imagem:   
-![An alternative description](Diagrama1.jpeg)   
-
-Always add a description to help the user understand the figure 
-
-NOTA: Cada entidade-tipo e cada associação devem ter um pequeno texto – um ou dois parágrafos – para descrever esse elemento do modelo e os seus atributos)
 
 ## Regras de negócio adicionais (Restrições)
 
