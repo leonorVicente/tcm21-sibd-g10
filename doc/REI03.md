@@ -38,7 +38,7 @@ sãoFeitos ( FUNCIONARIOS , PEDIDOS ) , 1:N , P/T
 trabalhaEm ( LOJA , FUNCIONARIOS ) , 1:N , T/T
 
   
-![](Diagrama1.jpeg)   
+![](diagrama_final.jpeg)   
 
 
 ## Regras de negócio adicionais (Restrições)
