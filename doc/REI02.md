@@ -10,9 +10,14 @@ Assim, poderá ter acesso às seguintes funcionalidades: consultar as vendas, co
 
 Caso o funcionário autenticado seja o gerente da loja, este tem acesso a todas as funcionalidades referidas acima, assim como, tem a capacidade de fazer pedidos a fornecedores. 
 
-#### Requesitos não funcionais:
+### Requisitos não funcionais:
 
-##### Usabilidade: 
+#### Usabilidade: 
+
+O sistema deverá ser simples e fácil de usar.
+
+#### Escabilidade:
+
 
 
 ---
