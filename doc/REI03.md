@@ -8,7 +8,7 @@ LOJA ( _ numeroContribuinte _ , nome , morada , codigoPostal , telefone )
 
 VENDAS ( _ codigo _ , funcionario , valor )
 
-CLIENTES ( _ numeroCliente _ , telemovel , codigoPostal )
+CLIENTES ( _ numeroCliente _ , nome , telemovel , codigoPostal )
 
 PRODUTO ( _ codigoProduto _ , stockLoja , stockArmazem , tamanho )
 
