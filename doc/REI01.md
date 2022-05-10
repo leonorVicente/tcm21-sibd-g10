@@ -19,7 +19,7 @@ Tanto para as reservas de clientes, como para o abastecimento da loja, o gerente
 
 ## Modelação do problema
 
-O primeiro pressuposto utilizado na modelação deste problema é que todas as entidades chaves (o código de funcionário, o código da reserva, etc.) possuem um valor único que não se pode repetir: por exemplo, não podemos ter duas reservas com o mesmo código. 
+O primeiro pressuposto utilizado na modelação deste problema é que todas as entidades chaves possuem um valor único que não se pode repetir. Desta forma, 
 
 Outro pressuposto utilizado na modelação deste problema é que a loja precisa sempre de empregados para funcionar.
 
