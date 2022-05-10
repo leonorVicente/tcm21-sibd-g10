@@ -14,7 +14,7 @@ PRODUTO ( _ codigoProduto _ , stockLoja , stockArmazem , tamanho )
 
 RESERVAS ( _ numeroReserva _ , apelido , valor , estadoPagamento )
 
-PEDIDOS ( _ numeroPedido _ , codigoProduto , quantidade , valor )
+PEDIDOS ( _ numeroPedido _ , produtos , quantidade , valor )
 
 FORNECEDORES ( _ codigoFornecedores _ , nome, morada , codigoPostal )
 
@@ -23,19 +23,19 @@ FUNCIONARIOS ( _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , 
 
 #### As associações definidas são:
 
-saoEfetuadas ( LOJA , VENDAS )
+saoEfetuadas ( LOJA , VENDAS ) , 1:N , P/T
 
-tem ( LOJA , FORNECEDORES )
+tem ( LOJA , FORNECEDORES ) , 1:N , T/P
 
-efetuaRegistos ( LOJA , CLIENTES )
+efetuaRegistos ( LOJA , CLIENTES ) , 1:N , T/T
 
-possui ( LOJA , PRODUTO )
+possui ( LOJA , PRODUTO ) , 1:N , T/T
 
-sãoEfetivadas ( CLIENTES , RESERVAS )
+sãoEfetivadas ( CLIENTES , RESERVAS ) , 1:N , P/T
 
-sãoFeitos ( FUNCIONARIOS , PEDIDOS )
+sãoFeitos ( FUNCIONARIOS , PEDIDOS ) , 1:N , P/T
 
-trabalhaEm ( LOJA , FUNCIONARIOS )
+trabalhaEm ( LOJA , FUNCIONARIOS ) , 1:N , T/T
 
 _(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
 
