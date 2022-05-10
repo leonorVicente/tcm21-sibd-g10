@@ -40,7 +40,7 @@ trabalhaEm ( LOJA , FUNCIONARIOS ) , 1:N , T/T
 _(Introduzir as entidade-tipo e associações do sistema, adicionalmente apresentar o diagrama do modelo Entidade-Associação.)_
 
 Exemplo de inserção de uma imagem:   
-![An alternative description](doc/Diagrama1.jpeg)   
+![An alternative description](Diagrama1.jpeg)   
 
 Always add a description to help the user understand the figure 
 
