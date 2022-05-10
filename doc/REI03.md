@@ -6,7 +6,7 @@
 
 LOJA ( _ numeroContribuinte _ , nome , morada , codigoPostal , telefone )
 
-VENDAS ( _ codigo _ , funcionario , valor )
+VENDAS ( _ codigo _ , valor )
 
 CLIENTES ( _ numeroCliente _ , nome , telemovel , codigoPostal )
 
