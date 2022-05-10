@@ -10,6 +10,11 @@ Assim, poderá ter acesso às seguintes funcionalidades: consultar as vendas, co
 
 Caso o funcionário autenticado seja o gerente da loja, este tem acesso a todas as funcionalidades referidas acima, assim como, tem a capacidade de fazer pedidos a fornecedores. 
 
+#### Requesitos não funcionais:
+
+##### Usabilidade: 
+
+
 ---
 [< Previous](REI01.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](REI03.md)
 :--- | :---: | ---: 
