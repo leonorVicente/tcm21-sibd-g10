@@ -8,9 +8,9 @@
 :[Esquema Relacional](rebd04.md)  
 :[SQL](rebd05.md)  
 
-## Group _xx_
+## Group 10
 
-* Leonor Vicente [@MarcoOliveira](https://github.com/marcoamarooliveira)
+* Leonor Vicente [@LeonorVicente](https://github.com/marcoamarooliveira)
 * Other team members
 
 ---
