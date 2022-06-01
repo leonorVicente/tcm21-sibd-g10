@@ -10,9 +10,7 @@
 
 ## Group _xx_
 
-_(Don't forget to add the group elements)_
-
-* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
+* Leonor Vicente [@MarcoOliveira](https://github.com/marcoamarooliveira)
 * Other team members
 
 ---
