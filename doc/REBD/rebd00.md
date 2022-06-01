@@ -10,7 +10,7 @@
 
 ## Group 10
 
-* Leonor Vicente [@LeonorVicente](https://github.com/marcoamarooliveira)
+* Leonor Vicente [@LeonorVicente](https://github.com/leonorVicente)
 * Other team members
 
 ---
