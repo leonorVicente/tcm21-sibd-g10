@@ -11,5 +11,5 @@ _(Descrever os tipos de utilizadores (actores) do sistema de informação e as f
 
 
 ---
-[< Previous](rebd00.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd02.md)
+[< Previous](rebd00.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rebd02.md)
 :--- | :---: | ---: 
