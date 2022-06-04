@@ -344,3 +344,8 @@ Tabela para relacionar as entidades Produto e Pedidos.
 | --- | --- | --- | --- | --- |
 | **FK\_Pedidos** | numeroPedido | pedidos | numeroPedido | Sim |
 | **FK\_Produto** | codigoProduto | produtos | codigoProduto | Sim |
+
+---
+[< Previous](rebd03.md) | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd05.md)
+:--- | :---: | ---: 
+
