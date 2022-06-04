@@ -51,7 +51,7 @@ FichaCliente (#_ numeroCliente _ -> LojaRoupa , nome , telemovel , codigoPostal 
 EnderecoLoja (#_ numeroContribuinte _ -> LojaRoupa , _ morada _ , codigoPostal , telefone)
 
 
-![](diagramaEntidades.jpeg)
+![](diagramaEntidades.png)
 
 ---
 [< Previous](rebd02.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rebd04.md)
