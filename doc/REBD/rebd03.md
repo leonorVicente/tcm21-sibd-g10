@@ -2,23 +2,23 @@
 
 ## Relações
 
-VENDAS ( #numeroContribuinte -> LOJA , _ codigo _ )
+VENDAS ( #_ numeroContribuinte _ -> LOJA , _ codigo _ )
 
-FORNECEDORES ( #numeroContribuinte -> LOJA , _ codigoFornecedor _ , nome, morada , codigoPostal )
+FORNECEDORES ( #_ numeroContribuinte _ -> LOJA , _ codigoFornecedor _ , nome, morada , codigoPostal )
 
-CLIENTES ( #numeroContribuinte -> LOJA, _ numeroCliente _ , nome , telemovel , codigoPostal )
+CLIENTES ( #_ numeroContribuinte _ -> LOJA, _ numeroCliente _ , nome , telemovel , codigoPostal )
 
-PRODUTO ( #numeroContribuinte -> LOJA , _ codigoProduto _ , stockLoja , stockArmazem , tamanho , preco , descricao )
+PRODUTO ( #_ numeroContribuinte _ -> LOJA , _ codigoProduto _ , stockLoja , stockArmazem , tamanho , preco , descricao )
 
-RESERVAS ( #numeroCliente -> CLIENTES , _ numeroReserva _ , apelido , valor , estadoPagamento )
+RESERVAS ( #_ numeroCliente _ -> CLIENTES , _ numeroReserva _ , apelido , valor , estadoPagamento )
 
-PEDIDOS ( #codigoFuncionario -> FUNCIONARIOS , _ numeroPedido _ )
+PEDIDOS ( #_ codigoFuncionario _ -> FUNCIONARIOS , _ numeroPedido _ )
 
-FUNCIONARIOS ( #numeroContribuinte -> LOJA , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
+FUNCIONARIOS ( #_ numeroContribuinte _ -> LOJA , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
 
-saoElaboradas ( #numeroReserva -> RESERVA , #codigoProduto -> PRODUTO )
+saoElaboradas ( #_ numeroReserva _ -> RESERVA , #_ codigoProduto _ -> PRODUTO )
 
-feitos ( #numeroPedido -> PEDIDO , #codigoProduto -> PRODUTO )
+feitos ( #_ numeroPedido _ -> PEDIDO , #_ codigoProduto _ -> PRODUTO )
 
 
 
