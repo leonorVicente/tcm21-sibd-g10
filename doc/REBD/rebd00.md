@@ -15,5 +15,5 @@
 
 ---
 _You can add a footer menu for navigation_ 
-< Previous | [^ Main](https://github.com/exemploTrabalho/reportSIBD/) | [Next >](rebd01.md)
+< Previous | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rebd01.md)
 :--- | :---: | ---: 
