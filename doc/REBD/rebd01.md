@@ -28,6 +28,24 @@ Após o login temos o ator Funcionário Autenticado que tem acesso às funcional
 
 Assim, poderá ter acesso às seguintes funcionalidades: consultar as vendas, consultar o stock em armazém e em loja, consultar as reservas feitas (e efetuar outras), consultar as fichas de clientes (e criar novas) e visualizar os pedidos a fornecedores.
 
+Desta forma, como casos de uso para o funcionário autenticado temos, por exemplo: 
+
+### Obter os produtos nos quais, o stock da loja seja maior que 1 unidade:
+
+SELECT codigoProduto, stockloja, descricao, numeroContribuinte FROM leonorvicente.produto where stockLoja > 1;
+
+### Obter os clientes cujo código postal acabe em 001:
+
+select * from leonorvicente.clientes where codigoPostal like '%001%';
+
+### Consultar todos os produtos que tenham stock em armazém:
+
+SELECT * FROM leonorvicente.produto where stockArmazem > 0;
+
+### Consultar (apesar de não conseguir efetuar novos - pois apenas o Gerente consegue) os pedidos efetuados a fornecedores:
+
+SELECT * FROM leonorvicente.produtopedidos where quantidade > 0
+
 Caso o funcionário autenticado seja o gerente da loja, este tem acesso a todas as funcionalidades referidas acima, assim como, tem a capacidade de fazer pedidos a fornecedores. 
 
 
