@@ -23,7 +23,32 @@ feitos ( #_ numeroPedido _ -> PEDIDO , #_ codigoProduto _ -> PRODUTO )
 
 
 ## Normalização do Esquema Relacional
-_(Apresentar o estudo da normalização das relações obtidas na secção anterior. Desnormalizar se necessário.)_
+
+1NF 
+
+LojaRoupa ( _ numeroContribuinte _, nome , morada , codigoPostal , telefone , _numeroCliente _ , nome , telemovel , codigoPostal , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
+
+2NF
+
+LojaRoupa ( _ numeroContribuinte _ , _numeroCliente _ , nome , telemovel , codigoPostal , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
+
+EnderecoLoja (#_ numeroContribuinte _ -> LojaRoupa , _ morada _ , codigoPostal , telefone)
+
+3NF
+
+Loja Roupa ( _ numeroContribuinte _ , _numeroCliente _ , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
+
+FichaCliente (#_ numeroCliente _ -> LojaRoupa , nome , telemovel , codigoPostal )
+
+4NF
+
+Loja Roupa ( _ numeroContribuinte _ , _numeroCliente _ , _ codigoFuncionario _ )
+
+DadosFuncionario (#_ codigoFuncionario _ -> LojaRoupa , tipo ,  nome , morada , NIF , telemovel , email )
+
+FichaCliente (#_ numeroCliente _ -> LojaRoupa , nome , telemovel , codigoPostal )
+
+EnderecoLoja (#_ numeroContribuinte _ -> LojaRoupa , _ morada _ , codigoPostal , telefone)
 
 ---
 [< Previous](rebd02.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rebd04.md)
