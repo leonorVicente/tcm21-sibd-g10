@@ -2,35 +2,136 @@
 
 ## DDL
 
-_(Apresentar o SQL para criação do esquema definido acima num SGBD MySQL.)_
+CREATE DATABASE  IF NOT EXISTS `leonorvicente`;
+USE `leonorvicente`;
+
+DROP TABLE IF EXISTS `loja`;
+CREATE TABLE `loja` (
+  `numeroContribuinte` int NOT NULL COMMENT 'NIF da loja (cada loja terá um NIF diferente).',
+  `nome` varchar(45) NOT NULL COMMENT 'Nome da loja.',
+  `morada` varchar(45) NOT NULL COMMENT 'Morada da loja.',
+  `codigoPostal` varchar(45) NOT NULL COMMENT 'Código postal da loja.',
+  `telefone` int NOT NULL COMMENT 'Telefone da loja.',
+  PRIMARY KEY (`numeroContribuinte`)
+) COMMENT='Esta tabela irá guardar informações acerca das lojas.';
+
+DROP TABLE IF EXISTS `produto`;
+CREATE TABLE `produto` (
+  `codigoProduto` int NOT NULL AUTO_INCREMENT COMMENT 'Código do produto  (auto-incrementado).',
+  `stockLoja` int NOT NULL COMMENT 'Stock na Loja.',
+  `stockArmazem` int NOT NULL COMMENT 'Stock no armazém.',
+  `tamanho` varchar(45) DEFAULT NULL COMMENT 'Tamanho do produto.',
+  `numeroContribuinte` int NOT NULL COMMENT 'Numero de contribuinte da loja que tem o produto (FK).',
+  `descricao` varchar(200) NOT NULL COMMENT 'Descrição do produto.',
+  `preco` decimal(10,2) NOT NULL COMMENT 'Preço do produto.',
+  PRIMARY KEY (`codigoProduto`),
+  KEY `FK_Loja_Produto_idx` (`numeroContribuinte`),
+  CONSTRAINT `FK_Loja_Produto` FOREIGN KEY (`numeroContribuinte`) REFERENCES `loja` (`numeroContribuinte`)
+) COMMENT='Esta tabela irá guardar informações sobre os produtos.';
+
+DROP TABLE IF EXISTS `fornecedores`;
+CREATE TABLE `fornecedores` (
+  `codigoFornecedor` int NOT NULL AUTO_INCREMENT COMMENT 'Código do fornecedor (auto-incrementado).',
+  `nome` varchar(45) NOT NULL COMMENT 'Nome do fornecedor.',
+  `morada` varchar(45) NOT NULL COMMENT 'Morada do fornecedor.',
+  `codigoPostal` varchar(45) NOT NULL COMMENT 'Código postal do fornecedor.',
+  `numeroContribuinte` int NOT NULL COMMENT 'Numero de contribuinte da loja que fornece produtos (FK).',
+  PRIMARY KEY (`codigoFornecedor`),
+  KEY `FK_Loja_Fornecedores_idx` (`numeroContribuinte`),
+  CONSTRAINT `FK_Loja_Fornecedores` FOREIGN KEY (`numeroContribuinte`) REFERENCES `loja` (`numeroContribuinte`)
+) COMMENT='Esta tabela irá guardar informações sobre os fornecedores.';
+
+DROP TABLE IF EXISTS `clientes`;
+CREATE TABLE `clientes` (
+  `numeroCliente` int NOT NULL AUTO_INCREMENT COMMENT 'Número de cliente (auto-incrementado).',
+  `nome` varchar(45) NOT NULL COMMENT 'Nome do cliente.',
+  `telemovel` int NOT NULL COMMENT 'Telemóvel do cliente.',
+  `codigoPostal` varchar(45) DEFAULT NULL COMMENT 'Código postal do cliente.',
+  `numeroContribuinte` int NOT NULL COMMENT 'Numero de contribuinte da loja que o cliente pertence (FK).',
+  PRIMARY KEY (`numeroCliente`),
+  KEY `FK_Loja_Clientes_idx` (`numeroContribuinte`),
+  CONSTRAINT `FK_Loja_Clientes` FOREIGN KEY (`numeroContribuinte`) REFERENCES `loja` (`numeroContribuinte`)
+) COMMENT='Esta tabela irá guardar informações sobre os clientes.';
+
+DROP TABLE IF EXISTS `funcionarios`;
+CREATE TABLE `funcionarios` (
+  `codigoFuncionario` int NOT NULL AUTO_INCREMENT COMMENT 'Código de funcionário (auto-incrementado).',
+  `tipo` varchar(45) NOT NULL COMMENT 'Tipo de funcionário.',
+  `nome` varchar(45) NOT NULL COMMENT 'Nome do funcionário.',
+  `morada` varchar(200) NOT NULL COMMENT 'Morada do funcionário.',
+  `nif` int NOT NULL COMMENT 'NIF do funcionário.',
+  `telemovel` varchar(45) NOT NULL COMMENT 'Telemóvel do funcionário.',
+  `email` varchar(45) DEFAULT NULL COMMENT 'Email do funcionário.',
+  `numeroContribuinte` int NOT NULL COMMENT 'Numero de contribuinte da loja que o funcionário trabalha (FK).',
+  PRIMARY KEY (`codigoFuncionario`),
+  KEY `FK_Loja_Funcionarios_idx` (`numeroContribuinte`),
+  CONSTRAINT `FK_Loja_Funcionarios` FOREIGN KEY (`numeroContribuinte`) REFERENCES `loja` (`numeroContribuinte`)
+) COMMENT='Esta tabela irá guardar informações sobre os funcionários.';
+
+DROP TABLE IF EXISTS `pedidos`;
+CREATE TABLE `pedidos` (
+  `numeroPedido` int NOT NULL COMMENT 'Número do Pedido.',
+  `codigoFuncionario` int NOT NULL COMMENT 'Código do funcionário que efectuou o pedido (FK).',
+  PRIMARY KEY (`numeroPedido`),
+  KEY `FK_Funcionarios_Pedidos_idx` (`codigoFuncionario`) /*!80000 INVISIBLE */,
+  CONSTRAINT `FK_Funcionarios_Pedidos` FOREIGN KEY (`codigoFuncionario`) REFERENCES `funcionarios` (`codigoFuncionario`)
+) COMMENT='Esta tabela irá guardar informações sobre os pedidos.';
+
+DROP TABLE IF EXISTS `vendas`;
+CREATE TABLE `vendas` (
+  `codigo` int NOT NULL AUTO_INCREMENT COMMENT 'Código da venda (auto-incrementado).',
+  `numeroContribuinte` int NOT NULL COMMENT 'Numero de contribuinte da loja que vende produtos (FK).',
+  PRIMARY KEY (`codigo`),
+  KEY `FK_Loja_Vendas_idx` (`numeroContribuinte`),
+  CONSTRAINT `FK_Loja_Vendas` FOREIGN KEY (`numeroContribuinte`) REFERENCES `loja` (`numeroContribuinte`)
+) COMMENT='Esta tabela irá guardar informações sobre as vendas.';
+
+DROP TABLE IF EXISTS `reservas`;
+CREATE TABLE `reservas` (
+  `numeroReserva` int NOT NULL AUTO_INCREMENT COMMENT 'Número da reserva (auto-incrementado).',
+  `apelido` varchar(45) NOT NULL COMMENT 'Apelido da reserva.',
+  `valor` decimal(10,2) NOT NULL COMMENT 'Valor da reserva.',
+  `estadoPagamento` varchar(45) DEFAULT NULL COMMENT 'Estado do pagamento da reserva.',
+  `numeroCliente` int NOT NULL COMMENT 'Numero de cliente que efectuou a reserva (FK).',
+  PRIMARY KEY (`numeroReserva`),
+  KEY `FK_Clientes_Reservas_idx` (`numeroCliente`),
+  CONSTRAINT `FK_Clientes_Reservas` FOREIGN KEY (`numeroCliente`) REFERENCES `clientes` (`numeroCliente`)
+) COMMENT='Esta tabela irá guardar informações sobre as reservas.';
+
+DROP TABLE IF EXISTS `produtoreservas`;
+CREATE TABLE `produtoreservas` (
+  `codigoProduto` int NOT NULL COMMENT 'Código do produto.',
+  `numeroReserva` int NOT NULL COMMENT 'Número da reserva.',
+  PRIMARY KEY (`codigoProduto`,`numeroReserva`),
+  KEY `FK_Reservas` (`numeroReserva`),
+  CONSTRAINT `FK_Produto_Reservas` FOREIGN KEY (`codigoProduto`) REFERENCES `produto` (`codigoProduto`),
+  CONSTRAINT `FK_Reservas` FOREIGN KEY (`numeroReserva`) REFERENCES `reservas` (`numeroReserva`)
+) COMMENT='Tabela para relacionar as entidades Produto e Reservas.';
+
+DROP TABLE IF EXISTS `produtovendas`;
+CREATE TABLE `produtovendas` (
+  `codigoProduto` int NOT NULL COMMENT 'Código do produto.',
+  `codigo` int NOT NULL COMMENT 'Código da venda.',
+  `valor` decimal(10,2) NOT NULL COMMENT 'Valor do produto na venda.',
+  PRIMARY KEY (`codigoProduto`,`codigo`),
+  KEY `FK_Vendas` (`codigo`),
+  CONSTRAINT `FK_Produtos` FOREIGN KEY (`codigoProduto`) REFERENCES `produto` (`codigoProduto`),
+  CONSTRAINT `FK_Vendas` FOREIGN KEY (`codigo`) REFERENCES `vendas` (`codigo`)
+) COMMENT='Tabela para relacionar as entidades Produto e Vendas.';
+
+DROP TABLE IF EXISTS `produtopedidos`;
+CREATE TABLE `produtopedidos` (
+  `codigoProduto` int NOT NULL COMMENT 'Código do Produto.',
+  `numeroPedido` int NOT NULL COMMENT 'Número do Pedido.',
+  `quantidade` int NOT NULL COMMENT 'Quantidade do Produto no Pedido.',
+  `valor` decimal(10,2) NOT NULL COMMENT 'Valor do Produto no Pedido.',
+  PRIMARY KEY (`codigoProduto`,`numeroPedido`),
+  KEY `FK_Pedidos` (`numeroPedido`),
+  CONSTRAINT `FK_Pedidos` FOREIGN KEY (`numeroPedido`) REFERENCES `pedidos` (`numeroPedido`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `FK_Produto` FOREIGN KEY (`codigoProduto`) REFERENCES `produto` (`codigoProduto`) ON DELETE RESTRICT ON UPDATE CASCADE
+) COMMENT='Tabela para relacionar as entidades Produto e Pedidos.';
 
 
-```sql
-USE `test`;
-
-DROP TABLE IF EXISTS `tabela_a`;
-DROP TABLE IF EXISTS `tabela_b`;
-
-CREATE TABLE IF NOT EXISTS `tabela_a` (
-  `model` int(4) unsigned NOT NULL,
-  `speed` int(4) unsigned NOT NULL,
-  `ram` int(3) unsigned NOT NULL,
-  `hd` float unsigned NOT NULL,
-  `screen` float unsigned NOT NULL,
-  `price` int(7) NOT NULL,
-  PRIMARY KEY (`model`)
-);
-
-CREATE TABLE IF NOT EXISTS `tabela_b` (
-  `model` int(4) unsigned NOT NULL,
-  `speed` int(4) unsigned NOT NULL,
-  `ram` int(3) unsigned NOT NULL,
-  `hd` float unsigned NOT NULL,
-  `cd` varchar(3) COLLATE latin1_bin NOT NULL,
-  `price` int(7) NOT NULL,
-  PRIMARY KEY (`model`)
-);
-```
 
 ## DML
 
