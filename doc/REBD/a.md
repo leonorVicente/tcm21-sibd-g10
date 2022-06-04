@@ -1,4 +1,4 @@
-# clientes
+# Clientes
 
 ## Descrição
 
@@ -17,21 +17,21 @@ Esta tabela irá guardar informações sobre os clientes.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **numeroCliente** |
 
--
-### Referêncial (chaves estrangeiras)
+
+### Referencial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Loja\_Clientes** | numeroContribuinte | Loja | numeroContribuinte | Não |
 
-# fornecedores
+# Fornecedores
 
 ## Descrição
 
@@ -43,28 +43,27 @@ Esta tabela irá guardar informações sobre os fornecedores.
 | --- | --- | --- | --- | --- | --- |
 | **codigoFornecedor** | Código do fornecedor (auto-incrementado). | INT | - | Sim | Não |
 | **nome** | Nome do fornecedor. | VARCHAR(45) | - | Não | Não |
-| **morada** | Morada do fornecedor. | VARCHAR(45) | - |
- | Não |
+| **morada** | Morada do fornecedor. | VARCHAR(45) | - | Não |
 | **codigoPostal** | Código postal do fornecedor. | VARCHAR(45) | - | Não | Não |
 | **numeroContribuinte** | Numero de contribuinte da loja que fornece produtos (FK). | INT | - | Não | Não |
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **codigoFornecedor** |
 
--
-### Referêncial (chaves estrangeiras)
+
+### Referencial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Loja\_Fornecedores** | numeroContribuinte | Loja | numeroContribuinte | Não |
 
-# funcionarios
+# Funcionarios
 
 ## Descrição
 
@@ -85,21 +84,21 @@ Esta tabela irá guardar informações sobre os funcionários.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **codigoFuncionario** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Loja\_Funcionarios** | numeroContribuinte | Loja | numeroContribuinte | Não |
 
-# loja
+# Loja
 
 ## Descrição
 
@@ -117,14 +116,14 @@ Esta tabela irá guardar informações acerca das lojas.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **numeroContribuinte** |
 
-# pedidos
+# Pedidos
 
 ## Descrição
 
@@ -139,21 +138,21 @@ Esta tabela irá guardar informações sobre os pedidos.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **numeroPedido** |
 
--
-### Referêncial (chaves estrangeiras)
+
+### Referencial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Funcionarios\_Pedidos** | codigoFuncionario | Funcionarios | codigoFuncionario | Sim |
 
-# produto
+# Produto
 
 ## Descrição
 
@@ -173,21 +172,21 @@ Esta tabela irá guardar informações sobre os produtos.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **codigoProduto** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Loja\_Produto** | numeroContribuinte | Loja | numeroContribuinte | Sim |
 
-# reservas
+# Reservas
 
 ## Descrição
 
@@ -205,21 +204,21 @@ Esta tabela irá guardar informações sobre as reservas.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **numeroReserva** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Clientes\_Reservas** | numeroCliente | Clientes | numeroCliente | Sim |
 
-# vendas
+# Vendas
 
 ## Descrição
 
@@ -234,21 +233,21 @@ Esta tabela irá guardar informações sobre as vendas.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
 | --- |
 | **codigo** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
 | --- | --- | --- | --- | --- |
 | **FK\_Loja\_Vendas** | numeroContribuinte | Loja | numeroContribuinte | Sim |
 
-# produtoreservas
+# Produtoreservas
 
 ## Descrição
 
@@ -263,7 +262,7 @@ Tabela para relacionar as entidades Produto e Reservas.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
@@ -271,7 +270,7 @@ Tabela para relacionar as entidades Produto e Reservas.
 | **codigoProduto** |
 | **numeroReserva** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
@@ -279,7 +278,7 @@ Tabela para relacionar as entidades Produto e Reservas.
 | **FK\_Produto\_Reservas** | codigoProduto | produto | codigoProduto | Sim |
 | **FK\_Reservas** | numeroReserva | reservas | numeroReserva | Sim |
 
-# produtovendas
+# Produtovendas
 
 ## Descrição
 
@@ -295,7 +294,7 @@ Tabela para relacionar as entidades Produto e Vendas.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
@@ -303,7 +302,7 @@ Tabela para relacionar as entidades Produto e Vendas.
 | **codigoProduto** |
 | **codigo** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
@@ -311,7 +310,7 @@ Tabela para relacionar as entidades Produto e Vendas.
 | **FK\_Produtos** | codigoProduto | produto | codigoProduto | Sim |
 | **FK\_Vendas** | codigo | vendas | codigo | Sim |
 
-# produtopedidos
+# Produtopedidos
 
 ## Descrição
 
@@ -328,7 +327,7 @@ Tabela para relacionar as entidades Produto e Pedidos.
 
 ## Restrições de Integridade
 
--
+
 ### Chave primária
 
 | **Coluna(s)** |
@@ -336,7 +335,7 @@ Tabela para relacionar as entidades Produto e Pedidos.
 | **codigoProduto** |
 | **numeroPedido** |
 
--
+
 ### Referêncial (chaves estrangeiras)
 
 | **Nome** | **Coluna(s)** | **Tabela referênciada** | **Coluna(s) referênciada(s)** | **Indexar** |
