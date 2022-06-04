@@ -43,7 +43,13 @@ ocorrem ( RESERVAS , PRODUTO ) , M:N , T/P
 existem ( PEDIDOS , PRODUTO ) , M:N , T/P
 
 ## Regras de negócio adicionais (Restrições)
-_(Apresentar uma lista detalhada das regras e restrições não possíveis de representar no modelo EA, que visam a manutenção da consistência e integridade da modelação do problema. Podem ser introduzidas regras não apresentadas no REI)_
+
+As regras de negócio adicionais são:
+
+- Apenas é possível fazer pedidos a fornecedores se o funcionário autenticado for o gerente;
+
+- Para ser efetuada uma venda, o stock do produto em loja e/ou armazém tem que ser superior a 0;
+
 
 ---
 [< Previous](rebd01.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rebd03.md)
