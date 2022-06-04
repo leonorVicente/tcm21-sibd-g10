@@ -11,9 +11,9 @@
 ## Group 10
 
 * Leonor Vicente [@LeonorVicente](https://github.com/leonorVicente)
-* Other team members
+
 
 ---
-_You can add a footer menu for navigation_ 
+
 < Previous | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >](rebd01.md)
 :--- | :---: | ---: 
