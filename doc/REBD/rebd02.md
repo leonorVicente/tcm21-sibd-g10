@@ -42,6 +42,8 @@ ocorrem ( RESERVAS , PRODUTO ) , M:N , T/P
 
 existem ( PEDIDOS , PRODUTO ) , M:N , T/P
 
+()! diagramaAtualizado.jpeg
+
 ## Regras de negócio adicionais (Restrições)
 
 As regras de negócio adicionais são:
