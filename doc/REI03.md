@@ -48,8 +48,11 @@ existem ( PEDIDOS , PRODUTO ) , M:N , T/P
 
 ## Regras de negócio adicionais (Restrições)
 
-A única regra de negócio adicional, tal como referido anteriormente, é que apenas o gerente consegue fazer pedidos a fornecedores.
+As regras de negócio adicionais são:
 
+- Apenas é possível fazer pedidos a fornecedores se o funcionário autenticado for o gerente;
+
+- Para ser efetuada uma venda, o stock do produto em loja e/ou armazém tem que ser superior a 0;
 ---
 [< Previous](REI02.md) | [^ Main](https://github.com/leonorVicente/tcm21-sibd-g10/) | [Next >]
 :--- | :---: | ---: 
