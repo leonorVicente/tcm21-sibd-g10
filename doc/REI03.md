@@ -6,15 +6,15 @@
 
 LOJA ( _ numeroContribuinte _ , nome , morada , codigoPostal , telefone )
 
-VENDAS ( _ codigo _ , valor )
+VENDAS ( _ codigo _ )
 
 CLIENTES ( _ numeroCliente _ , nome , telemovel , codigoPostal )
 
-PRODUTO ( _ codigoProduto _ , stockLoja , stockArmazem , tamanho )
+PRODUTO ( _ codigoProduto _ , stockLoja , stockArmazem , tamanho , preco , descricao )
 
 RESERVAS ( _ numeroReserva _ , apelido , valor , estadoPagamento )
 
-PEDIDOS ( _ numeroPedido _ , produtos , quantidade , valor )
+PEDIDOS ( _ numeroPedido _ )
 
 FORNECEDORES ( _ codigoFornecedores _ , nome, morada , codigoPostal )
 
@@ -31,14 +31,19 @@ efetuaRegistos ( LOJA , CLIENTES ) , 1:N , T/T
 
 possui ( LOJA , PRODUTO ) , 1:N , T/T
 
-sãoEfetivadas ( CLIENTES , RESERVAS ) , 1:N , P/T
+saoEfetivadas ( CLIENTES , RESERVAS ) , 1:N , P/T
 
-sãoFeitos ( FUNCIONARIOS , PEDIDOS ) , 1:N , P/T
+saoFeitos ( FUNCIONARIOS , PEDIDOS ) , 1:N , P/T
 
 trabalhaEm ( LOJA , FUNCIONARIOS ) , 1:N , T/T
 
-  
-![](diagrama_final.jpeg)   
+saoRealizadas ( VENDAS , PRODUTO ) , N:N , T/P
+
+ocorrem ( RESERVAS , PRODUTO ) , M:N , T/P
+
+existem ( PEDIDOS , PRODUTO ) , M:N , T/P
+
+![](diagramaAtualizado.jpeg)  
 
 
 ## Regras de negócio adicionais (Restrições)
