@@ -29,7 +29,7 @@ This project objetive was to create a database to a clothing store.
 ## Reports
 _Please add a hyperlink per Report.
 
-:[REI](doc/rei00.md)
+:[REI](doc/REI00.md)
 :[REBD](doc/rebd/rebd00.md)
 
 ## Team
