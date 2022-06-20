@@ -2,27 +2,37 @@
 
 ## Relações
 
-VENDAS ( #_ numeroContribuinte _ -> LOJA , _ codigo _ )
+VENDAS ( #numeroContribuinte -> LOJA , _ codigo _ )
 
-FORNECEDORES ( #_ numeroContribuinte _ -> LOJA , _ codigoFornecedor _ , nome, morada , codigoPostal )
+FORNECEDORES ( #numeroContribuinte -> LOJA , _ codigoFornecedor _ , nome, morada , codigoPostal )
 
-CLIENTES ( #_ numeroContribuinte _ -> LOJA, _ numeroCliente _ , nome , telemovel , codigoPostal )
+CLIENTES ( #numeroContribuinte -> LOJA, _ numeroCliente _ , nome , telemovel , codigoPostal )
 
-PRODUTO ( #_ numeroContribuinte _ -> LOJA , _ codigoProduto _ , stockLoja , stockArmazem , tamanho , preco , descricao )
+PRODUTO ( #numeroContribuinte -> LOJA , _ codigoProduto _ , stockLoja , stockArmazem , tamanho , preco , descricao )
 
-RESERVAS ( #_ numeroCliente _ -> CLIENTES , _ numeroReserva _ , apelido , valor , estadoPagamento )
+RESERVAS ( #numeroCliente -> CLIENTES , _ numeroReserva _ , apelido , valor , estadoPagamento )
 
-PEDIDOS ( #_ codigoFuncionario _ -> FUNCIONARIOS , _ numeroPedido _ )
+PEDIDOS ( #codigoFuncionario -> FUNCIONARIOS , _ numeroPedido _ )
 
-FUNCIONARIOS ( #_ numeroContribuinte _ -> LOJA , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
+FUNCIONARIOS ( #numeroContribuinte -> LOJA , _ codigoFuncionario _ , tipo , nome , morada , NIF , telemovel , email )
 
-saoElaboradas ( #_ numeroReserva _ -> RESERVA , #_ codigoProduto _ -> PRODUTO )
+saoElaboradas ( #numeroReserva -> RESERVA , #_ codigoProduto _ -> PRODUTO )
 
-feitos ( #_ numeroPedido _ -> PEDIDO , #_ codigoProduto _ -> PRODUTO )
+feitos ( #numeroPedido -> PEDIDO , #_ codigoProduto _ -> PRODUTO )
+
 
 
 
 ## Normalização do Esquema Relacional
+
+DF
+
+codigoFornecedor -> nome, morada, codigoPostal 
+numeroCliente -> nome, telemovel, codigoPostal
+codigoProduto -> stockLoja , stockArmazem , tamanho , preco , descricao
+numeroReserva -> apelido , valor , estadoPagamento
+codigoFuncionario -> tipo , nome , morada , NIF , telemovel , email
+
 
 1NF 
 
@@ -49,6 +59,10 @@ DadosFuncionario (#_ codigoFuncionario _ -> LojaRoupa , tipo ,  nome , morada , 
 FichaCliente (#_ numeroCliente _ -> LojaRoupa , nome , telemovel , codigoPostal )
 
 EnderecoLoja (#_ numeroContribuinte _ -> LojaRoupa , _ morada _ , codigoPostal , telefone)
+
+Vendas já está na quarta forma normal.
+
+Pedidos já está na quarta forma normal.
 
 
 ![](diagramaEntidades.png)
