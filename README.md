@@ -1,12 +1,12 @@
 # tcm21-sibd-g10
 
-# Base de dados para uma loja de roupa
+# Clothing Store Database
 
 Repository to host the project developed for 'Sistemas e Bases de Dados', a second year subject at Universidade da Maia. Developed by Group 10 : [@LeonorVicente](https://github.com/leonorVicente).
 
 ## Short theme description
 
-This project objetive was to create a database to a clothing store.
+This project objetive was to create a database for a clothing store.
 
 ## Repository organization
 
